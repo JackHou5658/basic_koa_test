@@ -64,7 +64,7 @@ class UserCtl {
       birthday: {
         type: "string",
         required: false,
-        format: /^\d{4}-\d{2}-\d{2}$/,
+        format: /^\d{8}$/,
       },
     });
     const user = await User.findByIdAndUpdate(ctx.params.id, ctx.request.body);
